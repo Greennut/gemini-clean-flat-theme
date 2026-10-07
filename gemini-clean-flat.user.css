@@ -12,17 +12,40 @@
 @-moz-document domain("gemini.google.com") {
 
   /* ========================================================
-     1. User Query Bubble: Flat tinted background, no borders
+     0. Design Tokens (CSS Variables)
+     ======================================================== */
+  :root {
+    /* Backgrounds & Borders */
+    --gem-flat-query-bg: #EDF2FA;
+    --gem-flat-code-bg: #F1F3F9;
+    --gem-flat-input-bg: #FFFFFF;
+    --gem-flat-border-subtle: #D8D8DC;
+    --gem-flat-divider-white: #FFFFFF;
+
+    /* Text & Icon Tones */
+    --gem-flat-text-main: #1F1F1F;
+    --gem-flat-code-base: #475569;
+    --gem-flat-code-punct: #64748B;
+
+    /* Syntax Highlighting Palette */
+    --gem-syntax-keyword: #B87ED8;
+    --gem-syntax-function: #4387F5;
+    --gem-syntax-string: #7EC972;
+    --gem-syntax-number: #9D7FE3;
+  }
+
+  /* ========================================================
+     1. User Query Bubble
      ======================================================== */
   span.user-query-bubble-with-background {
-    background-color: #EDF2FA !important;
+    background-color: var(--gem-flat-query-bg) !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 24px !important;
   }
 
   /* ========================================================
-     2. Input Container: White base, subtle border, monochrome icons
+     2. Input Container
      ======================================================== */
   input-container,
   .input-area-container,
@@ -33,8 +56,8 @@
   }
 
   input-area-v2 {
-    background-color: #FFFFFF !important;
-    border: 1px solid #D8D8DC !important;
+    background-color: var(--gem-flat-input-bg) !important;
+    border: 1px solid var(--gem-flat-border-subtle) !important;
     box-shadow: none !important;
     border-radius: 28px !important;
     overflow: hidden !important;
@@ -75,17 +98,17 @@
   input-area-v2 button[aria-label*="Send"] svg,
   input-area-v2 button[aria-label*="发送"] svg,
   input-area-v2 gem-icon-button[class*="send"] mat-icon {
-    color: #1f1f1f !important;
-    fill: #1f1f1f !important;
+    color: var(--gem-flat-text-main) !important;
+    fill: var(--gem-flat-text-main) !important;
     opacity: 1 !important;
   }
 
   /* ========================================================
-     3. Code Block: Card container and header styling
+     3. Code Block: Unified Container & Tight Header
      ======================================================== */
   code-block,
   div.code-block {
-    background-color: #F1F3F9 !important;
+    background-color: var(--gem-flat-code-bg) !important;
     border-radius: 20px !important;
     border: none !important;
     box-shadow: none !important;
@@ -94,7 +117,7 @@
 
   code-block pre,
   code-block .formatted-code-block-internal-container {
-    background-color: #F1F3F9 !important;
+    background-color: var(--gem-flat-code-bg) !important;
     border: none !important;
   }
 
@@ -107,8 +130,8 @@
 
   code-block .code-block-decoration,
   code-block [class*="header"] {
-    background-color: #F1F3F9 !important;
-    border-bottom: 2px solid #FFFFFF !important;
+    background-color: var(--gem-flat-code-bg) !important;
+    border-bottom: 2px solid var(--gem-flat-divider-white) !important;
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
@@ -122,8 +145,8 @@
 
   code-block .code-block-decoration *,
   code-block [class*="header"] * {
-    color: #1f1f1f !important;
-    fill: #1f1f1f !important;
+    color: var(--gem-flat-text-main) !important;
+    fill: var(--gem-flat-text-main) !important;
   }
 
   code-block pre {
@@ -132,7 +155,7 @@
   }
 
   /* ========================================================
-     4. Monospace Typography System
+     4. Typography
      ======================================================== */
   code-block,
   code-block pre,
@@ -153,7 +176,7 @@
   code-block pre,
   code-block pre code,
   code-block .formatted-code-block-internal-container {
-    color: #475569 !important;
+    color: var(--gem-flat-code-base) !important;
   }
 
   code-block [class*="keyword"],
@@ -161,7 +184,7 @@
   code-block [class*="selector-tag"],
   code-block [class*="meta"],
   code-block [class*="tag"] {
-    color: #b87ed8 !important;
+    color: var(--gem-syntax-keyword) !important;
     font-weight: normal !important;
   }
 
@@ -169,24 +192,24 @@
   code-block [class*="function"],
   code-block [class*="selector-id"],
   code-block [class*="selector-class"] {
-    color: #4387f5 !important;
+    color: var(--gem-syntax-function) !important;
   }
 
   code-block [class*="string"],
   code-block [class*="attr"],
   code-block [class*="attribute"] {
-    color: #7ec972 !important;
+    color: var(--gem-syntax-string) !important;
   }
 
   code-block [class*="number"],
   code-block [class*="literal"],
   code-block [class*="unit"] {
-    color: #9d7fe3 !important;
+    color: var(--gem-syntax-number) !important;
   }
 
   code-block [class*="punctuation"],
   code-block [class*="operator"] {
-    color: #64748b !important;
+    color: var(--gem-flat-code-punct) !important;
   }
 
 }
