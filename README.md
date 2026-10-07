@@ -1,3 +1,4 @@
+
 # Gemini Retro Flat UI
 
 A de-bloated, retro-flat user style for `gemini.google.com`. Strips away excessive Material elevation shadows and aggressive blur effects, restoring structured input boxes, muted query bubbles, and clean code blocks.
@@ -34,3 +35,6 @@ Contributions and pull requests are welcome. Currently, the code block container
    * Internal `<pre>` containers may occasionally render a transparent layer depending on shadow DOM encapsulation, exposing the white underlying canvas.
 
 If you are familiar with Angular Web Components and layout tree inheritance, feel free to submit a PR to refine the container inheritance rules.
+
+<img width="1880" height="2644" alt="27114" src="https://github.com/user-attachments/assets/10d203ef-4ab8-4891-a162-a6a81c826147" />
+<img width="1880" height="2659" alt="27116" src="https://github.com/user-attachments/assets/6264a311-af19-426d-a559-3e3aff988619" />
