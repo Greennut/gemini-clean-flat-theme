@@ -1,0 +1,190 @@
+/* ==UserStyle==
+@name           Gemini Retro Flat UI
+@namespace      github.com/your-username/gemini-flat-retro-theme
+@version        1.0.0
+@description    Retro flat visual theme for Gemini (gemini.google.com) with pure white bordered inputs, unified code blocks, and muted syntax highlighting.
+@author         Your Name
+@license        MIT
+==/UserStyle== */
+
+@-moz-document domain("gemini.google.com") {
+
+  /* ========================================================
+     1. User Query Bubble: Flat tinted background, no borders
+     ======================================================== */
+  span.user-query-bubble-with-background {
+    background-color: #EDF2FA !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 24px !important;
+  }
+
+  /* ========================================================
+     2. Input Container: White base, subtle border, monochrome icons
+     ======================================================== */
+  input-container,
+  .input-area-container,
+  div[class*="bottom-container"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  input-area-v2 {
+    background-color: #FFFFFF !important;
+    border: 1px solid #D8D8DC !important;
+    box-shadow: none !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  input-area-v2 div.input-area,
+  input-area-v2 .text-input-field,
+  rich-textarea,
+  rich-textarea textarea,
+  rich-textarea .ql-editor {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  input-area-v2 gem-icon-button[class*="send"],
+  input-area-v2 button[aria-label*="Send"],
+  input-area-v2 button[aria-label*="发送"],
+  input-area-v2 .send-button-container,
+  input-area-v2 .send-button-container * {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  input-area-v2 button[aria-label*="Send"] .mat-mdc-button-persistent-ripple,
+  input-area-v2 button[aria-label*="发送"] .mat-mdc-button-persistent-ripple {
+    display: none !important;
+  }
+
+  input-area-v2 button[aria-label*="Send"] mat-icon,
+  input-area-v2 button[aria-label*="发送"] mat-icon,
+  input-area-v2 button[aria-label*="Send"] svg,
+  input-area-v2 button[aria-label*="发送"] svg,
+  input-area-v2 gem-icon-button[class*="send"] mat-icon {
+    color: #1f1f1f !important;
+    fill: #1f1f1f !important;
+    opacity: 1 !important;
+  }
+
+  /* ========================================================
+     3. Code Block: Card container and header styling
+     ======================================================== */
+  code-block,
+  div.code-block {
+    background-color: #F1F3F9 !important;
+    border-radius: 20px !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  code-block pre,
+  code-block .formatted-code-block-internal-container {
+    background-color: #F1F3F9 !important;
+    border: none !important;
+  }
+
+  code-block pre code,
+  code-block pre span,
+  code-block [class*="code-line"] {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  code-block .code-block-decoration,
+  code-block [class*="header"] {
+    background-color: #F1F3F9 !important;
+    border-bottom: 2px solid #FFFFFF !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding: 8px 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  code-block .code-block-decoration *,
+  code-block [class*="header"] * {
+    color: #1f1f1f !important;
+    fill: #1f1f1f !important;
+  }
+
+  code-block pre {
+    padding: 10px 16px 14px 16px !important;
+    margin: 0 !important;
+  }
+
+  /* ========================================================
+     4. Monospace Typography System
+     ======================================================== */
+  code-block,
+  code-block pre,
+  code-block pre *,
+  code-block code,
+  code-block code *,
+  code-block [class*="code-line"],
+  code-block [class*="hljs"] * {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0 !important;
+  }
+
+  /* ========================================================
+     5. Syntax Highlighting
+     ======================================================== */
+  code-block pre,
+  code-block pre code,
+  code-block .formatted-code-block-internal-container {
+    color: #475569 !important;
+  }
+
+  code-block [class*="keyword"],
+  code-block [class*="built_in"],
+  code-block [class*="selector-tag"],
+  code-block [class*="meta"],
+  code-block [class*="tag"] {
+    color: #b87ed8 !important;
+    font-weight: normal !important;
+  }
+
+  code-block [class*="title"],
+  code-block [class*="function"],
+  code-block [class*="selector-id"],
+  code-block [class*="selector-class"] {
+    color: #4387f5 !important;
+  }
+
+  code-block [class*="string"],
+  code-block [class*="attr"],
+  code-block [class*="attribute"] {
+    color: #7ec972 !important;
+  }
+
+  code-block [class*="number"],
+  code-block [class*="literal"],
+  code-block [class*="unit"] {
+    color: #9d7fe3 !important;
+  }
+
+  code-block [class*="punctuation"],
+  code-block [class*="operator"] {
+    color: #64748b !important;
+  }
+
+}
